@@ -12,11 +12,11 @@ describe('setPrice', () => {
     expect(product.getPrice()).toBe(50);
   });
 
-  it('should throw an error when the price is less than the minimum price', () => {
+  it('should throw an exception when the price is less than the MIN_PRICE', () => {
     expect(() => product.setPrice(MIN_PRICE - 0.01)).toThrow(`The price must be between ${MIN_PRICE} and ${MAX_PRICE}`);
   });
 
-  it('should throw an error when the price is more than the maximum price', () => {
+  it('should throw an exception when the price is more than the MAX_PRICE', () => {
     expect(() => product.setPrice(MAX_PRICE + 0.01)).toThrow(`The price must be between ${MIN_PRICE} and ${MAX_PRICE}`);
   });
 });
