@@ -1,6 +1,7 @@
 import { Product } from './Product';
 
 
-const product =  new Product();
+const product =  Product.createProduct
 
-console.log('Product');
+// print the product details to the console
+console.log(product.toString());
